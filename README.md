@@ -19,8 +19,30 @@ Jag skapade ett WebView element i activity_main.xml och raderade textView.
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 ```
+Jag skapade en variabel "myWebView" i MainActivity.java som jag initierade i metoden
+onCreate() genom att använda findViewById för att hämta den från activity_main.xml.
+```
+    WebView myWebView;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        myWebView = findViewById(R.id.my_webview);
+```
+Jag skapade ett nytt WebViewClient-objekt i MainActivity.java i onCreate()-metoden 
+och importerade klassen WebViewClient.
+```
+myWebView = findViewById(R.id.my_webview);
+myWebView.setWebViewClient(new WebViewClient());
+myWebView.loadUrl("https://his.se");
+```
 
+```
+
+```
 ## Följande grundsyn gäller dugga-svar:
 
 - Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
