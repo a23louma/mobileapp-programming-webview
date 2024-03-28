@@ -7,7 +7,7 @@
 ```
 <string name="app_name">MyApp</string>
 ```
-Möjliggjorde internet återkomst i AndroidManifest.xml
+Möjliggjorde internetåterkomst i AndroidManifest.xml
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 ```
@@ -33,16 +33,21 @@ onCreate() genom att använda findViewById för att hämta den från activity_ma
         myWebView = findViewById(R.id.my_webview);
 ```
 Jag skapade ett nytt WebViewClient-objekt i MainActivity.java i onCreate()-metoden 
-och importerade klassen WebViewClient.
+och importerade klassen WebViewClient. Därefter la jag till WebViewClient till myWebView.
 ```
-myWebView = findViewById(R.id.my_webview);
-myWebView.setWebViewClient(new WebViewClient());
-myWebView.loadUrl("https://his.se");
+       myWebView = findViewById(R.id.my_webview);
+       myWebView.setWebViewClient(new WebViewClient());
+       myWebView.loadUrl("https://his.se");
+```
+Därefter la jag till möjligheten att köra Javascript genom att använda getSettings() och
+setJavaScriptEnabled() i metoden onCreate(). Jag behövde importera klassen WebSettings för 
+detta. Jag verifierade att detta fungerade och såg att rutan försvann att Javascript saknades
+när jag uppdaterade appen.
+```
+       WebSettings myWebSettings = myWebView.getSettings();
+       myWebSettings.setJavaScriptEnabled(true);
 ```
 
-```
-
-```
 ## Följande grundsyn gäller dugga-svar:
 
 - Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
