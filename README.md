@@ -47,6 +47,21 @@ när jag uppdaterade appen.
        WebSettings myWebSettings = myWebView.getSettings();
        myWebSettings.setJavaScriptEnabled(true);
 ```
+I MainActivity.java i metoderna showExternalWebPage() och showInternalWebPage() la jag in en extern
+URL, https://google.com, och min about.html-fil som intern webbplats.
+```
+    public void showExternalWebPage(){
+        myWebView.loadUrl("https://google.com");
+    }
+
+    public void showInternalWebPage(){
+        myWebView.loadUrl("file:///android_asset/about.html");
+    }
+```
+För att kalla på metoderna när "External Web Page" och "Internal Web Page" klickas på i
+dropdown-menyn ändrade jag i metoden onOptionsItemSelected().
+```
+```
 
 ## Följande grundsyn gäller dugga-svar:
 
