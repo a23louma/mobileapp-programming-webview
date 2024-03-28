@@ -3,7 +3,19 @@
 
 **Skriv din rapport här!**
 
-_Du kan ta bort all text som finns sedan tidigare_.
+ändrade namn på appen i strings.xml
+```
+<string name="app_name">MyApp</string>
+```
+Möjliggjorde internet återkomst i AndroidManifest.xml
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+```
+
+```
+
 
 ## Följande grundsyn gäller dugga-svar:
 
