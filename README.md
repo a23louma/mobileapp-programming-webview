@@ -11,9 +11,13 @@ Möjliggjorde internet återkomst i AndroidManifest.xml
 ```
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-
+Jag skapade ett WebView element i activity_main.xml och raderade textView.
+ 
 ```
-
+    <WebView
+        android:id="@+id/my_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 ```
 
 
