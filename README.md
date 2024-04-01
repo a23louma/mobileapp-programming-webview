@@ -83,10 +83,6 @@ interna webbsida och en av min externa webbsida. Skärmdumparna finns bifogade i
 
 
 
-
-
-Bilder läggs i samma mapp som markdown-filen.
-
 ![](internalWebPage.png)
 ![](externalWebPage.png)
 
